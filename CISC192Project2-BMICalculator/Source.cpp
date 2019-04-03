@@ -20,6 +20,5 @@ int main()
 	//ask the user for their height
 	cout << "What is your height in inches? ";
 	cin >> heightInInches;
-	//checking if 2019 version is connected to github
 
 }
