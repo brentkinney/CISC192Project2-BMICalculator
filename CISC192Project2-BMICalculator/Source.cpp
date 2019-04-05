@@ -1,10 +1,12 @@
 // this program calculates the BMI of the user and displays how many pounds away from normal they are
+//Written by Brent Kinney on 4/5/19
 #include <iostream>
 using namespace std;
 
 int main()
 {
-	double weightInPounds, heightInInches;
+	double weightInPounds, heightInInches, bmiValue;
+	string bmiCategory;
 
 	//display the BMI table for the User
 	cout << "BMI VALUES" << endl;
@@ -21,6 +23,26 @@ int main()
 	cout << "What is your height in inches? ";
 	cin >> heightInInches;
 
+	//calculate the users BMI
+	bmiValue = (weightInPounds * 703) / (heightInInches * heightInInches);
+	bmiValue = round(bmiValue * 100) / 100;
+	cout << "Your BMI value is: " << bmiValue << endl;
+
+	//determine what BMI category the user is and display it
+	if (bmiValue < 18.5) {
+		bmiCategory = "Underweight";
+	}
+	else if (bmiValue >= 18.5 && bmiValue < 25.1) {
+		bmiCategory = "Normal";
+	}
+	else if (bmiValue > 25.0 && bmiValue <= 30.0) {
+		bmiCategory = "Overweight";
+	}
+	else {
+		bmiCategory = "Obese";
+	}
+
+	cout << "Your BMI Category is " << bmiCategory << endl;
 
 	cout << "Programmed by Brent Kinney" << endl;
 
