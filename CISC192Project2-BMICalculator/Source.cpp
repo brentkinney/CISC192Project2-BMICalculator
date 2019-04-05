@@ -21,4 +21,13 @@ int main()
 	cout << "What is your height in inches? ";
 	cin >> heightInInches;
 
+
+	cout << "Programmed by Brent Kinney" << endl;
+
+	cout << "Press [Enter] key to end..."; //prompt lets user know
+	cin.ignore(256, '\n');
+	cin.get();
+
+	return 0;
+
 }
